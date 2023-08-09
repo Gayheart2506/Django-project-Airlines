@@ -1,0 +1,16 @@
+{% extends 'users/layout.html' %} 
+{% load static %}
+
+{% block title %} 
+    Login 
+{% endblock title %} 
+
+{% block body %} 
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <div style="color: red; font-weight: 400;">{{ message }}</div>
+        <input type="email" name="username" placeholder="Enter email">
+        <input type="password" name="password" placeholder="Enter password">
+        <button type="submit">Login</button>
+    </form>
+{% endblock body %} 

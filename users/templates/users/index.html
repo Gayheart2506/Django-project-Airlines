@@ -1,0 +1,13 @@
+{% extends 'users/layout.html' %} 
+
+{% block title %}
+    Home
+{% endblock %} 
+
+{% block body %} 
+    <h1>Welcome to the home page !! </h1>
+    <p>Click the links below to see what next : </p>
+    <ul>
+        <li><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+{% endblock %}
